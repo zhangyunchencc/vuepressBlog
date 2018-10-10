@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /photo.jpg
+heroImage: /images/photo.jpg
 actionText: 快速上手 →
 actionLink: guide.html
 features:

@@ -1,8 +1,15 @@
 ---
-title: 手把手教你使用VuePress搭建个人博客
+title: 手把手教你使用 VuePress 搭建个人博客
+sidebar: auto
+sidebarDepth: 2
 ---
 
-# 手把手教你使用VuePress搭建个人博客
+# 手把手教你使用 VuePress 搭建个人博客
+
+::: tip 提示
+有阅读障碍的同学，可以跳过第一至四节，下载我写好的工具包: 
+`git clone git@mobike.io:zhangyunchen/vuepress-devkit.git` 然后从第五节开始看。
+:::
 
 ## 一、为什么你需要一个博客？
 优秀的程序员都在写博客，写博客有很多好处：
@@ -24,30 +31,31 @@ VuePress 有很多优点：
 - 支持 PWA
 
 ## 三、开始搭建
+
 ### 创建项目文件夹
 可以右键手动新建，也可以使用 mkdir 命令新建：
 
-	mkdir vuepressBlog
+  mkdir vuepressBlogDemo
 
 ### 全局安装 VuePress
 
-	npm install -g vuepress
+  npm install -g vuepress
 
-### 进入 vuepressBlog 文件夹，初始化项目
+### 进入 vuepressBlogDemo 文件夹，初始化项目
 使用 `npm init` 或 `npm init -y`（默认yes）
 
-	npm init -y
+  npm init -y
 
 ### 创建文件夹和文件
-在 vuepressBlog 文件夹中创建 docs 文件夹，在 docs 中创建 .vuepress 文件夹，在.vuepress中创建 public 文件夹和 config.js 文件，最终项目结构如下所示：
+在 vuepressBlogDemo 文件夹中创建 docs 文件夹，在 docs 中创建 .vuepress 文件夹，在.vuepress中创建 public 文件夹和 config.js 文件，最终项目结构如下所示：
 
-	vuepressBlog
-	├─── docs
-	│   ├── README.md
-	│   └── .vuepress
-	│       ├── public
-	│       └── config.js
-	└── package.json
+  vuepressBlogDemo
+  ├─── docs
+  │   ├── README.md
+  │   └── .vuepress
+  │       ├── public
+  │       └── config.js
+  └── package.json
 
 ### 在 config.js 文件中配置网站标题、描述、主题等信息
 
@@ -77,14 +85,14 @@ module.exports = {
 ### 在 package.json 文件里添加两个启动命令
 ```json
 "scripts": {
-	"dev": "vuepress dev docs",
-	"build": "vuepress build docs"
+  "dev": "vuepress dev docs",
+  "build": "vuepress build docs"
 }
 ```
 
 ### 一切就绪 :tada: 跑起来看看吧
 
-	npm run dev
+  npm run dev
 
 ## 四、一些小亮点
 完成了基础搭建后，就可以在docs目录下新建 `.md` 文件写文章了（.md 是 Markdown 语法文件，你需要知道 Markdown 的一些基本写法，很简单，这里给大家一份 [Markdown 语法整理大集合](https://www.jianshu.com/p/b03a8d7b1719)）
@@ -108,17 +116,17 @@ export default {
 
 代码：
 
-	::: tip 提示
-	this is a tip
-	:::
+  ::: tip 提示
+  this is a tip
+  :::
 
-	::: warning 注意
-	this is a tip
-	:::
+  ::: warning 注意
+  this is a tip
+  :::
 
-	::: danger 警告
-	this is a tip
-	:::
+  ::: danger 警告
+  this is a tip
+  :::
 
 效果：
 ::: tip 提示
@@ -136,7 +144,7 @@ this is a tip
 ### 支持Emoji
 代码：
 
-	:tada: :100: :bamboo: :gift_heart: :fire:
+  :tada: :100: :bamboo: :gift_heart: :fire:
 
 效果：
 :tada: :100: :bamboo: :gift_heart: :fire:
@@ -197,21 +205,28 @@ public 文件夹下新建 manifest.json 文件，添加
 
 最终我选择了方案2，下面将给大家讲解如何使用 Github Pages 服务
 
-### 登陆 [Github](https://github.com/) 新建仓库
-打开 github 网站，登陆自己的github账号（没有账号的快去注册并面壁思过作为一个优秀的程序员为啥连一个github账号都没有）
+### 登陆 [Github](https://github.com/) 
+打开 github 网站，登陆自己的 github 账号（没有账号的快去注册并面壁思过作为一个优秀的程序员为啥连一个github账号都没有）
 
-接着新建一个仓库，如下图所示，将仓库名称填写为：`你的用户名.github.io`。例如我的用户名是 `zhangyunchencc`，那么仓库名就是：`zhangyunchencc.github.io`
+接着我们新建两个仓库，
 
-![](/eg1.png)
+### 新建仓库一： zhangyunchencc.github.io （不用克隆到本地）
 
-### 更新仓库
+如下图所示，将仓库名称填写为：`你的用户名.github.io`。例如我的用户名是 `zhangyunchencc`，那么仓库名就是：`zhangyunchencc.github.io`
+
+![](/images/vuepress/eg1.png)
+
+这个仓库建好后，不用克隆到本地，内容更新修改都在下面的仓库中进行。
+
+### 新建仓库二：随便起一个名字，比如：vuepressBlog （克隆到本地，网站内容在这里新增）
+
 将仓库克隆到本地
 
-	git clone https://github.com/username/username.github.io.git
+  git clone https://github.com/zhangyunchencc/vuepressBlog.git
 
-将本文第三部分创建的 vuepressBlog 文件夹下的内容拷贝到 username.github.io 文件夹中
+### 将本文第三节 vuepressBlogDemo 文件夹 或 [vuepress-devkit](https://mobike.io/zhangyunchen/vuepress-devkit) 中的内容拷贝到 vuepressBlog 文件夹中
 
-### 创建 deploy.sh 发布脚本
+### 在仓库二 vuePress 项目中创建 deploy.sh 发布脚本
 在 username.github.io 文件夹下创建 deploy.sh 文件，内容如下
 
 ```sh
@@ -237,7 +252,7 @@ git commit -m 'deploy'
 git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>  REPO=github上的项目
-# git push -f git@github.com:<USERNAME>/vuepress.git master:gh-pages
+# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
 cd -
 ```
@@ -256,13 +271,13 @@ cd -
 
 此时打开 Github Settings 中下面的链接: [https://zhangyunchencc.github.io/](https://zhangyunchencc.github.io/) 即可看到自己的主页啦~
 
-![](/eg2.png)
+![](/images/vuepress/eg2.png)
 
 #### PC 端页面是这样的：
-![](/eg3.png)
+![](/images/vuepress/eg3.png)
 
 #### 手机端页面是这样的：
-![](/eg4.png)
+![](/images/vuepress/eg4.png)
 
 ## 六、发布到自己的个人域名
 如果你不满足于 https://zhangyunchencc.github.io/ 这样的域名，想要一个自己个人的专属域名，比如 http://www.zhangyunchen.cc/ ，毕竟一些大牛（阮一峰 [http://www.ruanyifeng.com/blog/](http://www.ruanyifeng.com/blog/)） 都是自己名字的网址哦，很方便很酷呢 😎 
@@ -275,17 +290,40 @@ cd -
 我是在新网购买的，下面以新网为例，万网是类似的。
 
 购买完成后进入管理后台，点击 ”解析“ 按钮，添加下面两条内容：
-![](/eg5.png)
+![](/images/vuepress/eg5.png)
 
-![](/eg6.png)
+![](/images/vuepress/eg6.png)
 
 记录值里的 IP 可以通过 ping 自己的域名得到：
 
   ping www.username.github.io
 
 ### 添加 CNAME 文件
-在项目文件的根目录下创建 CNAME 文件，添加个人域名：
+#### 方法一：
+在项目文件的根目录下创建 CNAME 文件，添加个人域名 www.zhangyunchen.cc
 
-![](/eg7.png)
+![](/images/vuepress/eg7.png)
 
-并将 CNAME 文件上传至 git 仓库！！！
+并将 CNAME 文件上传至 git 仓库。
+
+#### 方法二：
+在仓库一 zhangyunchencc.github.io 中找到 Settings > Custom domain 把 www.zhangyunchen.cc 添加进去即可。
+
+![](/images/vuepress/eg8.png)
+
+### :clap: 大功告成，打开 [https://www.zhangyunchen.cc](https://www.zhangyunchen.cc) 看一下吧~~~
+
+
+## 七、最后
+- 你需要一些 [Markdown](https://www.jianshu.com/p/b03a8d7b1719) 语法的基础知识
+- 你需要一个 [Github](https://github.com/) 账号，并在里面创建两个 repo
+- Github 需要添加 ssh key，遇到问题可以百度解决
+- 个人博客不只可以用来写技术相关的内容，也可以有自己写的文章、随笔，甚至上传一些照片。
+
+
+以上，
+
+
+张韵晨 | Mobike FE | 2018.10
+
+
