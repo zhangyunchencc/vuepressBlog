@@ -210,24 +210,27 @@ public 文件夹下新建 manifest.json 文件，添加
 
 接着我们新建两个仓库，
 
-### 新建仓库一： zhangyunchencc.github.io （不用克隆到本地）
+### 新建仓库一： USERNAME.github.io （不用克隆到本地）
 
-如下图所示，将仓库名称填写为：`你的用户名.github.io`。例如我的用户名是 `zhangyunchencc`，那么仓库名就是：`zhangyunchencc.github.io`
+<b>！！！注意：USERNAME 必须是你 Github 的账号名称，不是你的名字拼音，也不是你的非主流网名，不要瞎起，要保证和Github账号名一模一样！</b>
 
-![](/images/eg1.png)
+例如我的 Github 账号名称是 zhangyunchencc
 
-这个仓库建好后，不用克隆到本地，内容更新修改都在下面的仓库中进行。
+![](/images/eg13.png)
 
-### 新建仓库二：随便起一个名字，比如：vuepressBlog （克隆到本地，网站内容在这里新增）
+那么新建仓库，Repository name 就填写为：zhangyunchencc.github.io
 
-将仓库克隆到本地
+![](/images/eg14.png)
 
-    git clone https://github.com/zhangyunchencc/vuepressBlog.git
+<b>这个仓库建好后，不用克隆到本地，内容更新修改都在下面的仓库中进行。</b>
 
-### 将本文第三节 vuepressBlogDemo 文件夹 或 [vuepress-devkit](https://mobike.io/zhangyunchen/vuepress-devkit) 中的内容拷贝到 vuepressBlog 文件夹中
+### 新建仓库二：随便起一个名字，比如：vuepressBlog （克隆到本地）
 
-### 在仓库二 vuePress 项目中创建 deploy.sh 发布脚本
-在 username.github.io 文件夹下创建 deploy.sh 文件，内容如下：
+这个项目是用来开发博客的，以后只需要改这个项目就够了。
+
+- 使用工具包的，将 [vuepress-devkit](https://mobike.io/zhangyunchen/vuepress-devkit) 中的内容拷贝到 vuepressBlog 文件夹中
+
+- 自己从头搭建的，将 vuepressBlogDemo 文件夹的内容拷贝到仓库二，并在根目录下创建 deploy.sh 文件，内容如下：
 
 ```sh
 #!/usr/bin/env sh
@@ -248,16 +251,30 @@ git init
 git add -A
 git commit -m 'deploy'
 
-# 如果你想要部署到 https://<USERNAME>.github.io
-git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+# 如果你想要部署到 https://USERNAME.github.io
+git push -f git@github.com:USERNAME/USERNAME.github.io.git master
 
-# 如果发布到 https://<USERNAME>.github.io/<REPO>  REPO=github上的项目
-# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+# 如果发布到 https://USERNAME.github.io/<REPO>  REPO=github上的项目
+# git push -f git@github.com:USERNAME/<REPO>.git master:gh-pages
 
 cd -
 ```
 
-### 在 package.json 文件夹中添加发布命令
+### 修改仓库二中的 deploy.sh 发布脚本
+
+把文件中的 USERNAME 改成 Github 账号名，例如我的账号名是 zhangyunchencc，那么就可以改为：
+
+```sh
+# 如果你想要部署到 https://USERNAME.github.io
+git push -f git@github.com:zhangyunchencc/zhangyunchencc.github.io.git master
+```
+
+这样仓库二和仓库一就建立了关联。
+
+简单说二者的关系是：仓库一负责显示网站内容，我们不需要改动它；日常开发和新增内容，都在仓库二中，并通过 npm run deploy 命令，将代码发布到仓库一。
+
+
+### 在 package.json 文件夹中添加发布命令（使用工具包的请忽略）
 
 ``` json
 "scripts": {
