@@ -318,15 +318,8 @@ git push -f git@github.com:zhangyunchencc/zhangyunchencc.github.io.git master
     ping www.username.github.io
 
 ### 添加 CNAME 文件
-#### 方法一：
-在项目文件的根目录下创建 CNAME 文件，添加个人域名 www.zhangyunchen.cc
 
-![](/images/eg7.png)
-
-并将 CNAME 文件上传至 git 仓库。
-
-#### 方法二：
-在仓库一 zhangyunchencc.github.io 中找到 Settings > Custom domain 把 www.zhangyunchen.cc 添加进去即可。
+在仓库一 USERNAME.github.io 中找到 Settings > Custom domain 把 www.zhangyunchen.cc 添加进去即可。
 
 ![](/images/eg8.png)
 
