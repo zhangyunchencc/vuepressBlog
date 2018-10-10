@@ -311,6 +311,8 @@ git push -f git@github.com:zhangyunchencc/zhangyunchencc.github.io.git master
 
 ![](/images/eg6.png)
 
+注意这里有坑！！！在 万网 购买域名的同学请注意，第二条记录中的 * 请用 @ 代替，万网不支持 *
+
 记录值里的 IP 可以通过 ping 自己的域名得到：
 
     ping www.username.github.io
