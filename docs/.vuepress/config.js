@@ -15,12 +15,11 @@ module.exports = {
     nav:[ // 导航栏配置
       {text: '前端基础', link: '/accumulate/1.html' },
       {text: '算法题库', link: '/algorithm/'},
-      {text: '诗和远方', link: '/others/'},
+      {text: '诗和远方', link: '/others/1.html'},
       {text: '微博', link: 'https://baidu.com'}      
     ],
-    sidebar:{
-      // docs文件夹下面的accumulate文件夹 文档中md文件 书写的位置(命名随意)
-      '/accumulate/': [// accumulate文件夹的README.md 不是下拉框形式
+    sidebar:{ // 侧边栏配置
+      '/accumulate/': [
           {
             title: '前端积累',
             children: [
@@ -38,7 +37,6 @@ module.exports = {
             ]
           }
         ],
-        // docs文件夹下面的algorithm文件夹 这是第二组侧边栏 跟第一组侧边栏没关系
         '/algorithm/': [
           '/algorithm/', 
           {
@@ -47,7 +45,15 @@ module.exports = {
               '/algorithm/' 
             ]
           }
-        ]
+        ],
+        '/others/': [
+          {
+            title: '诗和远方',
+            children: [
+              '/others/1.html'
+            ]
+          }
+        ],
     },
     // sidebar: 'auto', // 侧边栏配置
     sidebarDepth: 2
