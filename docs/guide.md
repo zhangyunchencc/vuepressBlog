@@ -7,8 +7,8 @@ sidebarDepth: 2
 # 手把手教你使用 VuePress 搭建个人博客
 
 ::: tip 提示
-有阅读障碍的同学，可以跳过第一至四节，下载我写好的[工具包](https://mobike.io/zhangyunchen/vuepress-devkit): 
-`git clone git@mobike.io:zhangyunchen/vuepress-devkit.git` 然后从第五节开始看。
+有阅读障碍的同学，可以跳过第一至四节，下载我写好的[工具包](https://mobike.io/mobike-fe/vuepress-devkit.git): 
+`git clone https://mobike.io/mobike-fe/vuepress-devkit.git` 然后从第五节开始看。
 :::
 
 ## 一、为什么你需要一个博客？
@@ -200,10 +200,10 @@ public 文件夹下新建 manifest.json 文件，添加
 说了这么多都是在本地进行的，现在我们要把本地的内容推送到某个服务器上，这样只要有网络，就可以随时随地看自己的网站了。
 
 一般来说，有两种方案可供选择：
-1. 自己买一个服务器，阿里云、腾讯云等，这种方式的好处是速度有保证、可以被搜索引擎收录，坏处是要花钱啊 :moneybag: 土豪同学可以考虑
+1. 自己买一个服务器，阿里云、腾讯云等，这种方式的好处是速度有保证、可以被搜索引擎收录，坏处是要花钱啊 :moneybag: 土豪同学可以考虑。
 2. 使用 [Github Pages](https://pages.github.com/) 。什么是 Github Pages 呢？简单说就是 Github 提供的、用于搭建个人网站的静态站点托管服务。很多人用它搭建个人博客。这种方式的好处是免费、方便，坏处是速度可能会有些慢、不能被国内的搜索引擎收录。
 
-最终我选择了方案2，下面将给大家讲解如何使用 Github Pages 服务
+最终我选择了方案2，下面将给大家讲解如何使用 Github Pages 服务。
 
 ### 登陆 [Github](https://github.com/) 
 打开 github 网站，登陆自己的 github 账号（没有账号的快去注册并面壁思过作为一个优秀的程序员为啥连一个github账号都没有）
@@ -227,7 +227,7 @@ public 文件夹下新建 manifest.json 文件，添加
 ### 将本文第三节 vuepressBlogDemo 文件夹 或 [vuepress-devkit](https://mobike.io/zhangyunchen/vuepress-devkit) 中的内容拷贝到 vuepressBlog 文件夹中
 
 ### 在仓库二 vuePress 项目中创建 deploy.sh 发布脚本
-在 username.github.io 文件夹下创建 deploy.sh 文件，内容如下
+在 username.github.io 文件夹下创建 deploy.sh 文件，内容如下：
 
 ```sh
 #!/usr/bin/env sh
@@ -315,9 +315,9 @@ cd -
 
 
 ## 七、最后
-- 你需要一些 [Markdown](https://www.jianshu.com/p/b03a8d7b1719) 语法的基础知识
+- 你需要一些 [Markdown](https://www.jianshu.com/p/b03a8d7b1719) 语法的基础知识；
 - 你需要一个 [Github](https://github.com/) 账号，并在里面创建两个 repo
-- Github 需要添加 ssh key，遇到问题可以百度解决
+- Github 需要添加 ssh key，遇到问题可以百度解决；
 - 个人博客不只可以用来写技术相关的内容，也可以有自己写的文章、随笔，甚至上传一些照片。
 
 
