@@ -5,6 +5,9 @@ module.exports = {
     ['link', { rel: 'icon', href: '/images/photo.jpg' }],
     ['link', { rel: 'manifest', href: '/images/photo.jpg' }],
     ['link', { rel: 'apple-touch-icon', href: '/images/photo.jpg' }],
+    ['meta', { 'http-quiv': 'pragma', cotent: 'no-cache'}],
+    ['meta', { 'http-quiv': 'expires', cotent: '0'}],
+    ['meta', { 'http-quiv': 'pragma', cotent: 'no-cache, must-revalidate'}]
   ],
   serviceWorker: true, // 是否开启 PWA
   base: '/', // 部署到github相关的配置
