@@ -24,7 +24,7 @@ module.exports = {
     sidebar:{ // 侧边栏配置
       '/accumulate/': [
           {
-            title: '前端积累',
+            title: '前端基础',
             children: [
               '/accumulate/1.html',
               '/accumulate/2.html',

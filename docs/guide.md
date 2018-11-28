@@ -212,7 +212,9 @@ public 文件夹下新建 manifest.json 文件，添加
 
 ### 新建仓库一： USERNAME.github.io （不用克隆到本地）
 
-<b>！！！注意：USERNAME 必须是你 Github 的账号名称，不是你的名字拼音，也不是你的非主流网名，不要瞎起，要保证和Github账号名一模一样！</b>
+::: warning 注意：
+USERNAME 必须是你 Github 的账号名称，不是你的名字拼音，也不是你的非主流网名，不要瞎起，要保证和Github账号名一模一样！
+:::
 
 例如我的 Github 账号名称是 zhangyunchencc
 
@@ -222,7 +224,7 @@ public 文件夹下新建 manifest.json 文件，添加
 
 ![](/images/eg14.png)
 
-<b>这个仓库建好后，不用克隆到本地，内容更新修改都在下面的仓库中进行。</b>
+**这个仓库建好后，不用克隆到本地，内容更新修改都在下面的仓库中进行。**
 
 ### 新建仓库二：随便起一个名字，比如：vuepressBlog （克隆到本地）
 
