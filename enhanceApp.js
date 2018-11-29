@@ -28,8 +28,8 @@ function integrateGitment(router) {
   function renderGitment(fullPath) {
     const gitment = new Gitment({
       id: fullPath,
-      owner: 'zhangyunchencc', // 必须是你自己的github账号
-      repo: 'blog-comment', // 上一个准备的github仓库
+      owner: '415205516@qq.com', // 必须是你自己的github账号
+      repo: 'zhangyunchen.github.io', // 上一个准备的github仓库
       oauth: {
         client_id: 'bacc88101144ca942935', // 第一步注册 OAuth application 后获取到的 Client ID
         client_secret: '1e34a67953453c233f7a16a18ffbd5bd497d3d7b', // 第一步注册 OAuth application 后获取到的 Clien Secret
