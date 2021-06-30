@@ -1,7 +1,7 @@
 ---
 title: 手把手教你使用 VuePress 搭建个人博客
 sidebar: auto
-sidebarDepth: 2
+sidebarDepth: 1
 ---
 
 # 手把手教你使用 VuePress 搭建个人博客
@@ -72,9 +72,10 @@ module.exports = {
   },
   themeConfig: {
     nav:[ // 导航栏配置
-      {text: '前端基础', link: '/accumulate/' },
-      {text: '算法题库', link: '/algorithm/'},
-      {text: '微博', link: 'https://baidu.com'}      
+      {text: '前端基础', link: '/basic/1.html' },
+      {text: '进阶之路', link: '/advanced/'},
+      {text: '诗和远方', link: '/others/1.html'},
+      {text: 'Github', link: 'https://github.com/zhangyunchencc'}        
     ],
     sidebar: 'auto', // 侧边栏配置
     sidebarDepth: 2, // 侧边栏显示2级

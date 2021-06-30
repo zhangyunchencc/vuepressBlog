@@ -1,6 +1,6 @@
 module.exports = {
-  title: '个人主页',
-  description: 'Personal Website',
+  title: 'Chen\'s Blog',
+  description: '前端工程师的进阶之路',
   head: [ // 注入到当前页面的 HTML <head> 中的标签
     ['link', { rel: 'icon', href: '/images/photo.jpg' }],
     ['link', { rel: 'manifest', href: '/images/photo.jpg' }],
@@ -16,49 +16,73 @@ module.exports = {
   },
   themeConfig: {
     nav:[ // 导航栏配置
-      {text: '前端基础', link: '/accumulate/1.html' },
-      {text: '算法题库', link: '/algorithm/'},
+      {text: '前端基础', link: '/basic/1.html' },
+      {text: '进阶之路', link: '/advanced/1.html'},
+      {text: '前端工程化', link: '/engineering/规范化/commit.html'},
+      {text: '面试题合集', link: '/interview/1.html'},
       {text: '诗和远方', link: '/others/1.html'},
-      {text: '微博', link: 'https://baidu.com'}      
+      {text: 'Github', link: 'https://github.com/zhangyunchencc'}      
     ],
     sidebar:{ // 侧边栏配置
-      '/accumulate/': [
+      '/basic/': [
           {
             title: '前端基础',
             children: [
-              '/accumulate/1.html',
-              '/accumulate/2.html',
-              '/accumulate/3.html',
-              '/accumulate/4.html',
-              '/accumulate/5.html',
-              '/accumulate/6.html',
-              '/accumulate/7.html',
-              '/accumulate/8.html',
-              '/accumulate/9.html',
-              '/accumulate/10.html',
-              '/accumulate/11.html',
+              '/basic/1.html',
+              '/basic/2.html',
+              '/basic/3.html',
+              '/basic/4.html',
+              '/basic/5.html',
+              '/basic/6.html',
+              '/basic/7.html',
+              '/basic/8.html',
+              '/basic/9.html',
+              '/basic/10.html',
+              '/basic/11.html',
             ]
           }
-        ],
-        '/algorithm/': [
-          '/algorithm/', 
-          {
-            title: '第二组侧边栏下拉框的标题1',
-            children: [
-              '/algorithm/' 
-            ]
-          }
-        ],
-        '/others/': [
-          {
-            title: '诗和远方',
-            children: [
-              '/others/1.html'
-            ]
-          }
-        ],
-    },
-    // sidebar: 'auto', // 侧边栏配置
-    sidebarDepth: 2
+      ],
+      '/advanced/': [
+        {
+          title: '进阶之路',
+          children: [
+            '/advanced/1.html' 
+          ]
+        }
+      ],
+      '/interview/': [
+        {
+          title: '面试题合集',
+          children: [
+            '/interview/1.html' 
+          ]
+        }
+      ],
+      '/engineering/': [
+        {
+          title: '模块化',
+          children: [
+            '/engineering/规范化/commit',
+          ]
+        }, {
+          title: '组件化'
+        }, {
+          title: '自动化'
+        }, {
+          title: '规范化',
+          children: [
+            '/engineering/规范化/commit'
+          ]
+        }
+      ],
+      '/others/': [
+        {
+          title: '诗和远方',
+          children: [
+            '/others/1.html'
+          ]
+        }
+      ],
+    }
   }
 };
